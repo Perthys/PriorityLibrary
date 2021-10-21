@@ -67,12 +67,6 @@ function Library.GetPlayerPriorityTable(EQFunc)
     
     for Index, Variable in ipairs(PlayersTable) do
         if Variable ~= LocalPlayer and Variable.Character then
-		if EQFunc then
-			if not EQFunc(Variable) then
-				return
-			end
-		end
-            
 
             local _Humanoid = Variable.Character:FindFirstChild("Humanoid")
             local _HumanoidRootPart = Variable.Character:FindFirstChild("HumanoidRootPart");
